@@ -1,8 +1,8 @@
 import 'dart:async';
 
 import 'package:rxdart/rxdart.dart';
-import '../models/trailer_model.dart';
-import '../resources/repository.dart';
+import 'package:flutter_bloc_pattner_example/src/models/trailer_model.dart';
+import 'package:flutter_bloc_pattner_example/src/resources/repository.dart';
 
 class MovieDetailBloc {
   final _repository = Repository();

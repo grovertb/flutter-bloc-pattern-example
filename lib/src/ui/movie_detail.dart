@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../blocs/movie_detail_bloc_provider.dart';
-import '../models/trailer_model.dart';
+import 'package:flutter_bloc_pattner_example/src/blocs/movie_detail/provider.dart';
+import 'package:flutter_bloc_pattner_example/src/models/trailer_model.dart';
 
 class MovieDetail extends StatefulWidget {
   final posterUrl;
@@ -72,8 +72,7 @@ class MovieDetailState extends State<MovieDetail> {
         top: false,
         bottom: false,
         child: NestedScrollView(
-          headerSliverBuilder: (BuildContext context,
-              bool innerBoxIsScrolled) {
+          headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
             return <Widget>[
               SliverAppBar(
                 expandedHeight: 200.0,
@@ -118,8 +117,7 @@ class MovieDetailState extends State<MovieDetail> {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(left: 10.0,
-                          right: 10.0),
+                      margin: EdgeInsets.only(left: 10.0, right: 10.0),
                     ),
                     Text(
                       releaseDate,
@@ -129,11 +127,9 @@ class MovieDetailState extends State<MovieDetail> {
                     ),
                   ],
                 ),
-                Container(margin: EdgeInsets.only(top: 8.0,
-                    bottom: 8.0)),
+                Container(margin: EdgeInsets.only(top: 8.0, bottom: 8.0)),
                 Text(description),
-                Container(margin: EdgeInsets.only(top: 8.0,
-                    bottom: 8.0)),
+                Container(margin: EdgeInsets.only(top: 8.0, bottom: 8.0)),
                 Text(
                   "Trailer",
                   style: TextStyle(
@@ -141,8 +137,7 @@ class MovieDetailState extends State<MovieDetail> {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                Container(margin: EdgeInsets.only(top: 8.0,
-                    bottom: 8.0)),
+                Container(margin: EdgeInsets.only(top: 8.0, bottom: 8.0)),
                 StreamBuilder(
                   stream: bloc.movieTrailers,
                   builder:

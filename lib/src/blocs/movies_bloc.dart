@@ -1,6 +1,8 @@
-import '../resources/repository.dart';
+
 import 'package:rxdart/rxdart.dart';
-import '../models/item_model.dart';
+
+import 'package:flutter_bloc_pattner_example/src/models/item_model.dart';
+import 'package:flutter_bloc_pattner_example/src/resources/repository.dart';
 
 class MoviesBloc {
   final _repository = Repository();

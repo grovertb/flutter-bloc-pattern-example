@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import '../models/item_model.dart';
-import '../blocs/movies_bloc.dart';
-import 'movie_detail.dart';
-import '../blocs/movie_detail_bloc_provider.dart';
+
+import 'package:flutter_bloc_pattner_example/src/models/item_model.dart';
+import 'package:flutter_bloc_pattner_example/src/blocs/movies_bloc.dart';
+import 'package:flutter_bloc_pattner_example/src/blocs/movie_detail/provider.dart';
+import 'package:flutter_bloc_pattner_example/src/ui/movie_detail.dart';
 
 class MovieList extends StatefulWidget {
   @override
